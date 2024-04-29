@@ -1,0 +1,356 @@
+1 | P a g e
+Ex: 1 To visualize a Bar Chart using R
+Date:
+Aim:
+To write an R program to visualize a bar plot. Algorithm:
+Step1: Start the Program
+Step2: define the vector
+Step3: plot the vector (where xlab represents the x-axis label, ylab represents the y-axis
+label, col represents the color fill of the bar chart and col.axis & col.lab represents
+the color of the axis and label
+Step4: save the file
+Step5: Run the program to visualize the plot. Program:
+# defining vector
+x <- c(7, 15, 23, 12, 44, 56, 32)
+# output to be present as PNG file
+png(file = "barplot.png")
+# plotting vector
+barplot(x, xlab = " Audience", ylab = "Count", col = "white", col.axis = "darkgreen", col.lab = "darkgreen")
+# saving the file
+dev.off()
+2 | P a g e
+Output:
+3 | P a g e
+Result:
+Thus the R program was successfully executed and the expected output was
+visualized.
+4 | P a g e
+
+Ex: 2 To visualize a Histogram using R
+Date:
+Aim:
+To write an R program to visualize a histogram. Algorithm:
+Step1: Start the Program
+Step2: define the vector
+Step3: plot the vector (where xlab represents the x-axis label, ylab represents the y-axis
+label, col represents the color fill of the bar chart and col.axis & col.lab represents the
+color of
+the axis and label
+Step4: save the file
+Step5: Run the program to visualize the plot. Program:
+# defining vector
+x <- c(21, 23, 56, 90, 20, 7, 94, 12, 57, 76, 69, 45, 34, 32, 49, 55, 57)
+# output to be present as PNG file
+png(file = "hist.png")
+# plotting vector
+hist(x, main = "Histogram of Vector x", xlab = "Values", col.lab = "darkgreen", col.main = "darkgreen")
+# saving the file
+dev.off()
+5 | P a g e
+Output:
+6 | P a g e
+Result:
+Thus the R program was successfully executed and the expected output was
+visualized.
+7 | P a g e
+Ex: 3 To visualize a Scatter plot using R
+Date:
+Aim:
+To write an R program to visualize a scatterplot. Algorithm:
+Step1: Start the Program
+Step2: define the vector
+Step3: plot the vector (where xlab represents the x-axis label, ylab represents the y-axis
+label, col represents the color fill of the bar chart and col.axis & col.lab represents the
+color of
+the axis and label
+Step4: save the file
+Step5: Run the program to visualize the plot. Program:
+# taking input from dataset Orange already present in R
+orange <- Orange[, c('age', 'circumference')]
+# output to be present as PNG file
+png(file = "plot.png")
+# plotting
+plot(x = orange$age, y = orange$circumference, xlab = "Age", ylab = "Circumference", main =
+"Age VS Circumference", col.lab = "darkgreen", col.main = "darkgreen", col.axis = "darkgreen")
+# saving the file
+dev.off()
+8 | P a g e
+Output:
+9 | P a g e
+Result:
+Thus the R program was successfully executed and the expected output was
+visualized.
+10 | P a g e
+Ex: 4 To visualize a Scatter plot Matrix using R
+Date:
+Aim:
+To write an R program to visualize a scatterplot matrix. Algorithm:
+Step1: Start the Program
+Step2: import the data set
+Step3: define the vector
+Step4: save the file
+Step5: Run the program to visualize the plot. Program:
+# Give the chart file a name. png(file = "scatterplot_matrices.png")
+# Plot the matrices between 4 variables giving 12 plots. # One variable with 3 others and total 4 variables. pairs(~wt+mpg+disp+cyl,data = mtcars, main = "Scatterplot Matrix")
+# Save the file. dev.off()
+11 | P a g e
+Output:
+12 | P a g e
+Result:
+Thus the R program was successfully executed and the expected output was
+visualized.
+
+Ex: 5 To visualize a Scatter plot to visualize the chart of cars 
+Date:
+Aim:
+To write an R program to plot the chart for cars with weight between 1.5 to 4 and
+mileage between 10 and 25.
+Algorithm:
+Step1: Start the Program 
+Step2: import the data set 
+Step3: define the vector 
+Step4: save the file
+Step5: Run the program to visualize the plot.
+Program:
+# Get the input values.
+input <- mtcars[, c('wt', 'mpg')]
+# Plot the chart for cars with 
+# weight between 1.5 to 4 and 
+# mileage between 10 and 25.
+plot(x = input$wt, y = input$mpg, 
+xlab = "Weight",
+ylab = "Milage", 
+xlim = c(1.5, 4), 
+ylim = c(10, 25),
+main = "Weight vs Milage"
+)
+2 | P a g e
+Output:
+ 
+Result:
+Thus the R program was successfully executed and the expected output was 
+visualized.
+3 | P a g e
+Ex: 6 To visualize a Tree Map using R 
+Date:
+Aim:
+To write an R program to visualize a tree map
+Algorithm:
+Step1: Start the Program
+Step2: install and load all the required packages 
+Step3: create a sample data frame of fruit sales. 
+Step4: save the file
+Step5: Run the program to visualize the plot.
+Program:
+# Installing required packages 
+install.packages("ggplot2") 
+install.packages("treemapify")
+# Importing required library 
+library(ggplot2) 
+library(treemapify)
+# Creating Dataframe
+df<- data.frame ( Fruits = c ( "Banana", "Apple", "Melon", "Plums", "Pineapple", "Orange", 
+"Apricot", "Grapes"), sales=c(25000,22000,15000,5000,18000,20000,3000,9000))
+# Importing required library 
+library(ggplot2) 
+library(treemapify)
+# Creating dataframe
+df<- data.frame ( Fruits = c ( "Banana", "Apple", "Melon", "Plums", "Pineapple", "Orange", 
+"Apricot", "Grapes"), sales=c(25000,22000,15000,5000,18000,20000,3000,9000))
+# Plotting the TreeMap
+ggplot2::ggplot(df,aes(area=sales,fill=sales))+treemapify::geom_treemap()
+4 | P a g e
+# Importing required library 
+library(ggplot2) 
+library(treemapify)
+# Creating Dataframe
+df<- data.frame ( Fruits = c ( "Banana", "Apple", "Melon", "Plums", "Pineapple", "Orange", 
+"Apricot", "Grapes"), sales=c(25000,22000,15000,5000,18000,20000,3000,9000))
+# Plotting TreeMap Graph 
+ggplot2::ggplot(df,aes(area=sales,fill=Fruits,label=Fruits))+treemapify::geom_treemap(layo 
+ut="squarified") + geom_treemap_text(place = "centre",size = 12)+labs(title="Customized 
+Tree Plot using ggplot and treemapify in R")
+Output:
+ 
+ 
+ 
+ 
+Result:
+Thus the R program was successfully executed and the expected output was 
+visualized.
+5 | P a g e
+Ex: 7 To Generate a 3D Simple Right Circular Cone using R 
+Date:
+Aim:
+To write an R program to Generate a 3D Simple Right Circular Cone.
+Algorithm:
+Step1: Start the Program 
+Step2: import the data set 
+Step3: define the vector 
+Step4: save the file
+Step5: Run the program to visualize the plot.
+Program:
+# To illustrate simple right circular cone
+cone <- function(x, y)
+{
+sqrt(x ^ 2 + y ^ 2)
+}
+# prepare variables.
+x <- y <- seq(-1, 1, length = 30) 
+z <- outer(x, y, cone)
+# plot the 3D surface
+persp(x, y, z)
+6 | P a g e
+Output:
+ 
+Result:
+Thus the R program was successfully executed and the expected output was 
+visualized.
+7 | P a g e
+
+
+Ex: 8 To visualize a simple DEM Model 
+Date:
+Aim:
+To write an R program to visualize a simple DEM Model.
+Algorithm:
+Step1: Start the Program 
+Step2: import the data set 
+Step3: define the vector 
+Step4: save the file
+Step5: Run the program to visualize the plot.
+Program:
+# Visualizing a simple DEM model
+z <- 2 * volcano
+# Exaggerate the relief
+x <- 10 * (1:nrow(z))
+# 10 meter spacing (S to N)
+y <- 10 * (1:ncol(z))
+# 10 meter spacing (E to W)
+# Don't draw the grid lines : border = NA
+par(bg = "gray")
+persp(x, y, z, theta = 135, phi = 30, col = "brown", scale = FALSE, ltheta = -120, shade = 0.75, 
+border = NA, box = FALSE)
+8 | P a g e
+Output:
+ 
+s
+Result:
+Thus the R program was successfully executed and the expected output was 
+visualized.
+
+
+9 | P a g e
+Ex: 9 To get a Lisbon Water-colour Map using ggmap 
+Date:
+Aim:
+To write an R program to get a Lisbon Water-colour Map using ggmap.
+Algorithm:
+Step1: Start the Program 
+Step2: import the data set 
+Step3: define the vector 
+Step4: save the file
+Step5: Run the program to visualize the plot.
+Program:
+install.packages("ggmap") 
+library(ggmap)
+lisbon_map <- get_map(location ='lisbon', source="stamen") 
+Google now requires an API key; see `ggmap::register_google()` 
+install.packages('osmdata')
+library(osmdata)
+lisbon_map <- get_map( getbb('lisbon'), source="stamen") 
+ggmap(lisbon_map)
+lisbon_watercolor <- get_map( getbb('lisbon'), maptype='watercolor', source="stamen") 
+ggmap(lisbon_watercolor)
+10 | P a g e
+Output:
+ 
+ 
+Result:
+Thus the R program was successfully executed and the expected output was 
+visualized.
+
+
+11 | P a g e
+Ex: 10 To generate a Geographical Analysis Machine 
+Date:
+Aim:
+To write an R program to generate a Geographical Analysis Machine
+Algorithm:
+Step1: Start the Program 
+Step2: import the data set 
+Step3: define the vector 
+Step4: save the file
+Step5: Run the program to visualize the plot.
+Program:
+sidsgam <- opgam(data = as(nc, "data.frame"), radius = 30, + step = 10, alpha = 0.002) 
+gampoints <- SpatialPoints(sidsgam[, c("x", "y")] * 1000, + CRS("+proj=utm +zone=18
++datum=NAD27"))
+library(rgdal)
+ll <- CRS("+proj=longlat +datum=NAD27") 
+gampoints <- spTransform(gampoints, ll) 
+gam.layout <- list("sp.points", gampoints)
+12 | P a g e
+Output:
+ 
+Result:
+Thus the R program was successfully executed and the expected output was 
+visualized.
+
+
+13 | P a g e
+Ex: 11 To visualize a nested pie chart using Plotly Package. 
+Date:
+Aim:
+To write an R program to visualize a nested pie chart using Plotly Package.
+Algorithm:
+Step1: Start the Program 
+Step2: import the data set 
+Step3: define the vector 
+Step4: save the file
+Step5: Run the program to visualize the plot.
+Program:
+install.package('plotly') 
+library(plotly)
+# load library plotly
+library(plotly)
+# create sample data frame
+sample_data <- data.frame(group= c('Group1', 'Group2', 'Group3', 'Group4'), 
+value= c(25,30,20,25))
+# create pie chart using plot_ly() function
+plot_ly(sample_data) %>%
+add_pie(sample_data, labels = ~`group`, values = ~`value`)
+14 | P a g e
+Output:
+ 
+ 
+ 
+Result:
+Thus the R program was successfully executed and the expected output was 
+visualized.
+
+
+15 | P a g e
+Ex: 12 Weather Prediction
+Date:
+Aim:
+To write an R program to visualize a plot on weather prediction.
+Algorithm:
+Step1: Start the Program 
+Step2: import the data set 
+Step3: define the vector 
+Step4: save the file
+Step5: Run the program to visualize the plot.
+Program:
+library(RColorBrewer) 
+cols<-brewer.pal(9,"PuRd") 
+cols
+pal<-colorRampPalette(cols) 
+plot(Weather_dataset_Copy, col=pal(5))
+16 | P a g e
+Output:
+ 
+ 
+Result:
+Thus the R program was successfully executed and the expected output was 
+visualized.
